@@ -20,6 +20,8 @@
 #include <string.h>
 #include "Unit_Test_Mode.h"
 
+#include "UT_TM4C123GH6PM_Config_Pins.h"
+
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class cl_unit_tester{
 private:
@@ -27,6 +29,7 @@ private:
 protected:
 public:
     //--- Import objects
+    cl_ut_TM4C123GH6PM_Config_Pins utMCU; //Ctor
 
 
     //--- class functions

@@ -21,9 +21,10 @@ cl_unit_tester::cl_unit_tester(){ //Ctor
 //::---------------------------------------------------------------------------
 void cl_unit_tester::run_unit_tests(){
     printf("Running unit tests:\n");
-    printf("cl_ut_TM4C123GH6PM_Config_Pins \n");
 
     //todo - user to add  unit tests
+    printf("cl_ut_TM4C123GH6PM_Config_Pins \n");
+    utMCU.unit_test_TM4C123GH6PM_Config_Pins();
 
 
     printf("...completed unit tests.\n");
