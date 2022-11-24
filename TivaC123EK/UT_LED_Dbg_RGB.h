@@ -18,9 +18,8 @@ public:
     //--- Import objects
     cl_led_dbg_rgb oLED_Dbg; //Ctor
 
-
+    //+++ class & functions
     cl_ut_LEDs_Dbg_RGB(); //Ctor
-
     void unit_test_LEDs_Dbg_RGB();
 };
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

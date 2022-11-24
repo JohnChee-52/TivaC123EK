@@ -25,6 +25,7 @@ void cl_unit_tester::run_unit_tests(){
     //todo - user to add  unit tests
     printf("cl_ut_TM4C123GH6PM_Config_Pins \n");
     utMCU.unit_test_TM4C123GH6PM_Config_Pins();
+    ut_oLED_Dbg.unit_test_LEDs_Dbg_RGB();
 
 
     printf("...completed unit tests.\n");

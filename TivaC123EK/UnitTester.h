@@ -21,6 +21,7 @@
 #include "Unit_Test_Mode.h"
 
 #include "UT_TM4C123GH6PM_Config_Pins.h"
+#include "UT_LED_Dbg_RGB.h"
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class cl_unit_tester{
@@ -30,6 +31,7 @@ protected:
 public:
     //--- Import objects
     cl_ut_TM4C123GH6PM_Config_Pins utMCU; //Ctor
+    cl_ut_LEDs_Dbg_RGB ut_oLED_Dbg; //Ctor
 
 
     //--- class functions
