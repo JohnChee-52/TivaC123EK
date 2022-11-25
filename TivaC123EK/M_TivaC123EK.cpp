@@ -18,7 +18,7 @@
 #include "UnitTester.h"
 
 
-#ifndef Unit_Test_Mode
+#ifndef Unit_Test_Mode  //Code below runs only when not unit-testing
 //=======================================================================================
 int main(){ //TivaC123EK
     printf("Running TivaC123EK:\n"); //Sign on
@@ -29,6 +29,9 @@ int main(){ //TivaC123EK
         ui32_Cnt++;
         if(ui32_Cnt <= 5){
             printf("%d Hi\n", ui32_Cnt);
+            if (ui32_Cnt == 5){
+                printf("Done %d times already. Bye! \n", ui32_Cnt);
+            }
         }
     }
 }

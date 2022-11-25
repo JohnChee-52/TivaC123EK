@@ -15,13 +15,23 @@ cl_unit_tester::cl_unit_tester(){ //Ctor
 //::cc-------------------------------------------------------------------------
 //::---------------------------------------------------------------------------
 void cl_unit_tester::run_unit_tests(){
-    printf("Running unit tests:\n");
-    printf("cl_ut_TM4C123GH6PM_Config_Pins \n");
+    printf("Running unit-tests of modules...\n");
 
-    //todo - to add  unit tests
+    // *** user to add module unit-tests here e.g.
+    //printf("unit-testing of ModName :\n"); //sign on
+    //uto_ModName.run_unit_tests(); //Module unit-tests
 
 
-    printf("...completed unit tests.\n");
+
+    printf("...completed unit-testing of modules specified within function ""cl_unit_tester::run_unit_tests()"".\n");
+}
+//::---------------------------------------------------------------------------
+void cl_unit_tester::run_unit_tests_of_report_module(){
+    printf("Running unit-tests of ""UnitTester"" report module:\n");
+    uto_Report.run_unit_tests();
+
+
+    printf("...completed unit-testing of ""UnitTester"" report module.\n");
 }
 //::---------------------------------------------------------------------------
 

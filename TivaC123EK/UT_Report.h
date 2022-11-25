@@ -1,33 +1,31 @@
 /*
- * UnitTester.h
+ * UT_Report.h
  *
- *  Created on: 31 Oct 2022
+ *  Created on: 25 Nov 2022
  *      Author: John Chee
  */
 
-#ifndef UNITTESTER_H_
-#define UNITTESTER_H_
+#ifndef UT_REPORT_H_
+#define UT_REPORT_H_
 
-#include <stdio.h>
-#include "UT_Report.h"
 #include "Unit_Test_Mode.h"
-
+#include "Report.h"
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class cl_unit_tester{
+class cl_ut_report{
 private:
 protected:
 public:
     //--- Import objects
-    cl_ut_report uto_Report; //Ctor
+    cl_report oReport;
 
-    //--- class functions
-    cl_unit_tester(); //Ctor
+    //+++ class + functions
+    cl_ut_report(); //Ctor
     void run_unit_tests();
-    void run_unit_tests_of_report_module();
-
 };
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-#endif /* UNITTESTER_H_ */
+
+
+#endif /* UT_REPORT_H_ */
