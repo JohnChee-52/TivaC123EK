@@ -15,7 +15,6 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "Unit_Test_Mode.h"
-#include "UnitTester.h"
 
 
 #ifndef Unit_Test_Mode

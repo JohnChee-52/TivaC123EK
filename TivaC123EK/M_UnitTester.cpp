@@ -16,32 +16,31 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "UnitTester.h"
 #include "Unit_Test_Mode.h"
+#include "UnitTester.h"
 
-//Note: To run unit tests functions of the UnitTester, comment next line
-#define TEST_UnitTester_itself
-
+//Note: Uncomment next line to unit_test UnitTester itself; otherwise it tests other modules.
+//#define TEST_UnitTester_itself //when defined, UnitTester will test itself
 #ifndef TEST_UnitTester_itself
 
+
 #ifdef Unit_Test_Mode
-/ut=========================================================================ut
+//ut=========================================================================ut
 int main(){ //unit tester
     printf("UnitTester:\n"); //Sign on
 
-//    SysCtlClockSet(SYSCTL_SYSDIV_4|SYSCTL_USE_PLL|SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN); //config for 50MHz clock
+    SysCtlClockSet(SYSCTL_SYSDIV_4|SYSCTL_USE_PLL|SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN); //config for 50MHz clock
 
     cl_unit_tester oUnitTester; //Ctor
-    oUnitTester.run_unit_tests();
+    oUnitTester.run_unit_tests_of_project_modules();
     while (1){
     }
 }
 //ut=========================================================================ut
-
 #endif
 
-#else
 
+#else
 #ifdef TEST_UnitTester_itself
 //ut=========================================================================ut
 int main(){ //unit tester

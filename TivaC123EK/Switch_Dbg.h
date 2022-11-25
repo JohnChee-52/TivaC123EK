@@ -67,7 +67,7 @@ uint8_t SwPressed_bitpat; //Bit pattern of buttons just pressed
 
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class cl_switches : public cl_tm4c123gh6pm_pins{
+class cl_switch_dbg : public cl_tm4c123gh6pm_pins{
 private:
 protected:
 public:
@@ -88,7 +88,7 @@ public:
 
 
 
-    cl_switches(); //Ctor
+    cl_switch_dbg(); //Ctor
 
 
     //----- Switch name             DO   IC pin TIVA

@@ -18,8 +18,8 @@ public:
     //--- Import objects
     cl_tm4c123gh6pm_pins oMCU;
 
+    //+++ class & functions
     cl_ut_TM4C123GH6PM_Config_Pins(); //Ctor
-
     void unit_test_TM4C123GH6PM_Config_Pins();
 };
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
