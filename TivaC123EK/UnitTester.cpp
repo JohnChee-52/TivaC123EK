@@ -20,63 +20,24 @@ cl_unit_tester::cl_unit_tester(){ //Ctor
 //::cc-------------------------------------------------------------------------
 //::---------------------------------------------------------------------------
 void cl_unit_tester::run_unit_tests(){
-    printf("Running unit tests:\n");
+    printf("Running unit-tests of modules...\n");
 
-    //todo - user to add  unit tests
-    printf("cl_ut_TM4C123GH6PM_Config_Pins \n");
-    utMCU.unit_test_TM4C123GH6PM_Config_Pins();
+    // *** user to add module unit-tests here e.g.
+    //printf("unit-testing of ModName :\n"); //sign on
+    //uto_ModName.run_unit_tests(); //Module unit-tests
+
     ut_oLED_Dbg.unit_test_LEDs_Dbg_RGB();
 
 
-    printf("...completed unit tests.\n");
+    printf("...completed unit-testing of modules specified within function ""cl_unit_tester::run_unit_tests()"".\n");
 }
 //::---------------------------------------------------------------------------
-//-- print Report Header
-//::---------------------------------------------------------------------------
-void cl_unit_tester::init_TrackCnt_function(){
-    ui16_Track_cnt_Functions = 1;
-}
-//::---------------------------------------------------------------------------
-void cl_unit_tester::prnLns_Hdr_TestReport(const char* aui8Usr_ModName,
-                                           const char* aui8Usr_TestDate){ //eg "MCP7940_RTC", "5 Mar 2022"
-    printf("=== Biosense Diagnostics Pte Ltd:     Firmware Test Report ===================\n");
-    printf("Module Name: \t%s.cpp \t%s \n", aui8Usr_ModName, aui8Usr_TestDate);
-}
-//::--------------------------------------------------------------------------- //eg "cl_mcp7940_rtc"
-void cl_unit_tester::prnLn_ClassName(const char* aui8Usr_ClassName){
-    printf("Class Name: \t%s \t ..testing functions...\n", aui8Usr_ClassName);
-}
-//::---------------------------------------------------------------------------
+void cl_unit_tester::run_unit_tests_of_report_module(){
+    printf("Running unit-tests of ""UnitTester"" report module:\n");
+    uto_Report.run_unit_tests();
 
-//-- print Body of functions undergoing tests
-//::---------------------------------------------------------------------------
-void cl_unit_tester::prnLn_Hdr_SubSection(const char* aui8Usr_Hdr){
-    printf("%s \n", aui8Usr_Hdr);
-}
-//::---------------------------------------------------------------------------
-void cl_unit_tester::prnLn_CommentLine(const char* aui8Usr_Comment){
-    printf("%s \n", aui8Usr_Comment);
-}
-//::---------------------------------------------------------------------------
-void cl_unit_tester::prnLn_Cnt_n_FnName(const char* aui8Usr_Function){
-    printf("   %d \t %s \n", ui16_Track_cnt_Functions, aui8Usr_Function);
-    ui16_Track_cnt_Functions++;
-}
-//::---------------------------------------------------------------------------
-void cl_unit_tester::prnLn_Cnt_n_FnName_ET(const char* aui8Usr_Function_at_Edge){
-    printf("   %d ET\t %s \n", ui16_Track_cnt_Functions, aui8Usr_Function_at_Edge);
-    ui16_Track_cnt_Functions++;
-}
-//::---------------------------------------------------------------------------
 
-//::---------------------------------------------------------------------------
-void cl_unit_tester::prnLn_Hdr_SubSection_UsageExamples(){//"=====----- Usage Examples -----====="
-    printf("=====----- Usage Examples -----===== \n");
-}
-//::---------------------------------------------------------------------------
-void cl_unit_tester::prnLns_Footer_TestReport(){
-    printf("\nAll %d functions have successfully passed unit testing!\n", (ui16_Track_cnt_Functions - 1));
-    printf("----------------------------------------------------------------------------\n");
+    printf("...completed unit-testing of ""UnitTester"" report module.\n");
 }
 //::---------------------------------------------------------------------------
 

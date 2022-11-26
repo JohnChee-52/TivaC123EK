@@ -81,6 +81,11 @@ protected:
     uint32_t aui32ADC_Buf[8];
     uint32_t ui32ADC_Value_avg;
 
+public:
+    //+++ Class & functions
+    cl_tm4c123gh6pm_pins(); //Ctor
+
+
     //--- Digital inputs
     bool read_DI_PA2(); //MCUp19
     bool read_DI_PB0(); //MCUp45
@@ -150,11 +155,6 @@ protected:
     void drv_H_PD1_FSS(); //MCUp62
     void drv_L_PD1_FSS(); //MCUp62
     bool is_H_PD1_FSS(); //MCUp62
-
-
-public:
-    cl_tm4c123gh6pm_pins(); //Ctor
-
 };
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
