@@ -19,22 +19,22 @@ cl_unit_tester::cl_unit_tester(){ //Ctor
 }
 //::cc-------------------------------------------------------------------------
 //::---------------------------------------------------------------------------
-void cl_unit_tester::run_unit_tests(){
-    printf("Running unit-tests of modules...\n");
+void cl_unit_tester::run_unit_tests_of_project_modules(){
+    printf("Running unit-tests of project modules...\n");
 
     // *** user to add module unit-tests here e.g.
     //printf("unit-testing of ModName :\n"); //sign on
     //uto_ModName.run_unit_tests(); //Module unit-tests
 
+//    ut_oLED_Dbg.unit_test_LEDs_Dbg_RGB();
+    uto_Sw_Debug.run_unit_tests();
 
-
-    printf("...completed unit-testing of modules specified within function ""cl_unit_tester::run_unit_tests()"".\n");
+    printf("...completed unit-testing all modules within function ""cl_unit_tester::run_unit_tests()"".\n");
 }
 //::---------------------------------------------------------------------------
 void cl_unit_tester::run_unit_tests_of_report_module(){
     printf("Running unit-tests of ""UnitTester"" report module:\n");
     uto_Report.run_unit_tests();
-
 
     printf("...completed unit-testing of ""UnitTester"" report module.\n");
 }
