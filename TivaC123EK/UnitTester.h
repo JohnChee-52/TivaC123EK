@@ -22,7 +22,6 @@
 #include "UT_TM4C123GH6PM_Config_Pins.h"
 #include "UT_Report.h"
 
-
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class cl_unit_tester{
 private:
@@ -33,9 +32,9 @@ public:
     cl_ut_TM4C123GH6PM_Config_Pins utMCU; //Ctor
     cl_ut_report uto_Report; //Ctor
 
-    //--- class functions
+    //+++ class functions
     cl_unit_tester(); //Ctor
-    void run_unit_tests();
+    void run_unit_tests_of_project_modules();
     void run_unit_tests_of_report_module();
 
 };
