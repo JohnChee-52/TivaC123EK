@@ -1,13 +1,10 @@
 /*
  * M_TivaC123_EK.cpp
  * Tiva C Evaluation Kit - User interface
- * An example of Version Control using EGit
- * If you are using stdio, you need to allocate heap space e.g. 1000.
- * Note: printf will only show on console if the string has "\n".
+ * Press a switch for LED to light up - L switch = orange,
+ * Right switch = turqouise.
  *
- * Simple example of printing:  "<n> Hi" five times, where n=1..5
- *
- *  Created on: 30 Oct 2022
+ *  Created on: 3 Dec 2022
  *      Author: John Chee
  */
 
@@ -15,7 +12,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "Unit_Test_Mode.h"
-//#include "LED_Dbg_RGB.h"
+#include "LED_Dbg_RGB.h"
 #include "Switch_Dbg.h"
 
 #include "TivaC123EK.h"
@@ -33,7 +30,7 @@ int main(){ //TivaC123EK
     printf("Done %d times already. \n", (i - 1));
 
     //+++ Import objects
-//    cl_LEDs_Dbg_RGB oLEDs_Dbg_RGB; //Ctor
+    cl_led_dbg_rgb oLEDs_Dbg_RGB; //Ctor
     cl_switch_dbg oSw_Debug; //Ctor
 
 
@@ -41,8 +38,17 @@ int main(){ //TivaC123EK
     cl_tivac123ek oTivaEK;
 
 
-
-
+    //=== OS
+    printf("Press a switch for LED to light up: L=orange, R=turqouise\n");
+    while(1){
+        if(oSw_Debug.is_justPressed_SysMode()){
+            oLEDs_Dbg_RGB.pulse_delay_Orange_ms(300);
+        }
+        if(oSw_Debug.is_justPressed_SysWakeup()){
+            oLEDs_Dbg_RGB.pulse_delay_Turqoise_ms(300);
+        }
+    }
+    //==== OS end
 }
 //=======================================================================================
 #endif
