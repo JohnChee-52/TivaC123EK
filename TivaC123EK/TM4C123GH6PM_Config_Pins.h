@@ -82,8 +82,9 @@ protected:
     uint32_t ui32ADC_Value_avg;
 
 public:
-    //+++ class and functions
+    //+++ Class & functions
     cl_tm4c123gh6pm_pins(); //Ctor
+
 
     //--- Digital inputs
     bool read_DI_PA2(); //MCUp19

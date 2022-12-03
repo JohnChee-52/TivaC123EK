@@ -26,7 +26,7 @@ void cl_unit_tester::run_unit_tests_of_project_modules(){
     //printf("unit-testing of ModName :\n"); //sign on
     //uto_ModName.run_unit_tests(); //Module unit-tests
 
-//    ut_oLED_Dbg.unit_test_LEDs_Dbg_RGB();
+    ut_oLED_Dbg.unit_test_LEDs_Dbg_RGB();
 
 
     printf("...completed unit-testing of modules specified within function ""cl_unit_tester::run_unit_tests()"".\n");
