@@ -32,13 +32,13 @@
 
 
 
-// *** Note: Uncomment next line to unit_test UnitTester itself; otherwise it tests other modules.
+#ifdef Unit_Test_Mode   //Code below runs during unit-testing mode
+
+// ***** Note: Uncomment next line to unit_test UnitTester itself; otherwise it tests other modules.
 //#define TEST_UnitTester_itself //when defined, UnitTester will test itself
+// ***** -----------------------------------------------------------------*****
 
 #ifndef TEST_UnitTester_itself
-
-
-#ifdef Unit_Test_Mode
 //ut=========================================================================ut
 int main(){ //unit tester
     printf("Unit-testing: Project modules:\n"); //Sign on
@@ -52,11 +52,10 @@ int main(){ //unit tester
     }
 }
 //ut=========================================================================ut
-#endif
 
 
 #else
-#ifdef TEST_UnitTester_itself   //Code below runs only during unit-testing mode when asked to test itself
+//Code below runs only when asked to test itself during unit-testing mode
 //ut=========================================================================ut
 int main(){ //unit tester
     printf("UnitTester: Report (console-print) module:\n"); //Sign on
@@ -69,9 +68,7 @@ int main(){ //unit tester
 }
 //ut=========================================================================ut
 #endif
-#endif
 
-
-
+#endif  //Unit_Test_Mode
 
 

@@ -413,6 +413,8 @@ void cl_ut_switch_dbg::run_unit_tests(){
 
         SysCtlDelay(300 * 7500);
     }
+    oReport.prnLn_CommentLine("Switch test ended (timed out)");
+
 }
 //=============================================================================
 
