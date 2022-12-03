@@ -354,9 +354,8 @@ void cl_ut_LEDs_Dbg_RGB::unit_test_LEDs_Dbg_RGB(){
 
 
     printf("Ex 3. Blink LED in 10-colour sequence (using SysCtlDelay()) - visually observable \n");
-//    oUART0_PA.tx_Footer_TestReport();
 
-    while(1){
+    for (int i=0; i<3; i++){
         //----- Indicator pulse
         oLED_Dbg.pulse_delay_Red_ms(300);//uses SysCtlDelay
         oLED_Dbg.pulse_delay_Green_ms(300);//uses SysCtlDelay

@@ -9,7 +9,11 @@
 #ifndef UT_SWITCH_DBG_H_
 #define UT_SWITCH_DBG_H_
 
-#include "UnitTester.h"
+#include <stdint.h>
+#include <stdbool.h>
+#include <driverlib/sysctl.h>
+
+#include "Report.h"
 #include "Switch_Dbg.h"
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -18,7 +22,7 @@ private:
 protected:
 public:
     //--- Import objects
-//    cl_unit_tester oUTester;
+    cl_report oReport; //Ctor
     cl_switch_dbg oSw_Dbg; //Ctor
 
     //+++ class & functions

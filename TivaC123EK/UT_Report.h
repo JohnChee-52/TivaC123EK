@@ -17,7 +17,7 @@ private:
 protected:
 public:
     //--- Import objects
-    cl_report oReport;
+    cl_report oReport; //Ctor
 
     //+++ class + functions
     cl_ut_report(); //Ctor

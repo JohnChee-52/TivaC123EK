@@ -18,10 +18,12 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
+
 #include "Unit_Test_Mode.h"
 #include "UT_TM4C123GH6PM_Config_Pins.h"
 #include "UT_LED_Dbg_RGB.h"
 #include "UT_Report.h"
+#include "UT_Switch_Dbg.h"
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class cl_unit_tester{
@@ -32,7 +34,9 @@ public:
     //--- Import objects
     cl_ut_TM4C123GH6PM_Config_Pins utMCU; //Ctor
     cl_ut_LEDs_Dbg_RGB ut_oLED_Dbg; //Ctor
+    cl_report oReport; //Ctor
     cl_ut_report uto_Report; //Ctor
+    cl_ut_switch_dbg uto_Sw_Debug; //Ctor
 
     //+++ class functions
     cl_unit_tester(); //Ctor
