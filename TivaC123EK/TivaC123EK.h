@@ -8,11 +8,19 @@
 #ifndef TIVAC123EK_H_
 #define TIVAC123EK_H_
 
+#include "TM4C123GH6PM_Config_Pins.h"
+#include "Report.h"
+
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class cl_tivac123ek{
 private:
 protected:
 public:
+    //--- Imported Objects
+    cl_report oReport; //Ctor
+
+
+    //+++ class & functions
     cl_tivac123ek(); //Ctor
 
 };

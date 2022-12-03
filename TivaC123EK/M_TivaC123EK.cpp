@@ -15,24 +15,34 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "Unit_Test_Mode.h"
+//#include "LED_Dbg_RGB.h"
+#include "Switch_Dbg.h"
+
+#include "TivaC123EK.h"
 
 
 #ifndef Unit_Test_Mode  //Code below runs only when not unit-testing
 //=======================================================================================
 int main(){ //TivaC123EK
     printf("Running TivaC123EK:\n"); //Sign on
-    uint32_t ui32_Cnt;
 
-    ui32_Cnt = 0;
-    while (1){
-        ui32_Cnt++;
-        if(ui32_Cnt <= 5){
-            printf("%d Hi\n", ui32_Cnt);
-            if (ui32_Cnt == 5){
-                printf("Done %d times already. Bye! \n", ui32_Cnt);
-            }
-        }
+    int i ;
+    for (i=1; i<=3; i++){
+        printf("%d Hi\n", i);
     }
+    printf("Done %d times already. \n", (i - 1));
+
+    //+++ Import objects
+//    cl_LEDs_Dbg_RGB oLEDs_Dbg_RGB; //Ctor
+    cl_switch_dbg oSw_Debug; //Ctor
+
+
+    //+++ Ctor
+    cl_tivac123ek oTivaEK;
+
+
+
+
 }
 //=======================================================================================
 #endif
